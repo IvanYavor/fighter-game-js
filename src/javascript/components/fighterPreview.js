@@ -14,14 +14,14 @@ export function createFighterPreview(fighter, position) {
 
   const fighterInfoElement = createElement({
     tagName: 'div',
-    className: 'fighter-preview__info',
+    className: 'fighter-preview___info',
   });
 
   fighterInfoElement.innerHTML = `
   <p>Name: ${name}</p>
-  <p>Name: ${attack}</p>
-  <p>Name: ${defense}</p>
-  <p>Name: ${health}</p>
+  <p>Attack: ${attack}</p>
+  <p>Defense: ${defense}</p>
+  <p>health: ${health}</p>
   `;
 
   fighterElement.append(imageElement, fighterInfoElement);
