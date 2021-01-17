@@ -72,7 +72,7 @@ export async function fight(firstFighter, secondFighter) {
         return void 0;
       }
 
-      if (attacker.critInput.length === 3) {
+      if (attacker.criticalInput.length === 3) {
         showStatus(attacker, 'Critical hit!');
       }
 
@@ -94,11 +94,11 @@ export async function fight(firstFighter, secondFighter) {
         return false;
       }
 
-      if (!fighter.critInput.includes(event.code)) {
-        fighter.critInput.push(event.code);
+      if (!fighter.criticalInput.includes(event.code)) {
+        fighter.criticalInput.push(event.code);
       }
 
-      if (fighter.critInput.length === 3) {
+      if (fighter.criticalInput.length === 3) {
         fighter.timeOfCrit = currentTime;
         return true;
       }
@@ -148,12 +148,12 @@ export async function fight(firstFighter, secondFighter) {
           break;
       }
 
-      if (playerOne.critInput.includes(event.code)) {
-        playerOne.critInput.splice(playerOne.critInput.indexOf(event.code), 1);
+      if (playerOne.criticalInput.includes(event.code)) {
+        playerOne.criticalInput.splice(playerOne.criticalInput.indexOf(event.code), 1);
       }
 
-      if (playerTwo.critInput.includes(event.code)) {
-        playerTwo.critInput.splice(playerTwo.critInput.indexOf(event.code), 1);
+      if (playerTwo.criticalInput.includes(event.code)) {
+        playerTwo.criticalInput.splice(playerTwo.criticalInput.indexOf(event.code), 1);
       }
     }
 
