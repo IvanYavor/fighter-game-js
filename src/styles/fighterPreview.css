@@ -11,3 +11,9 @@
 .fighter-preview___left {
   align-items: flex-start;
 }
+
+.fighter-preview___info {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+}
